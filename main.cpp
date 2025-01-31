@@ -107,7 +107,7 @@ LRESULT CALLBACK WindowProc(		// Message handler function
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hwnd, &ps);
 
-            // All painting occurs here, between BeginPaint and EndPaint.
+            // All painting occurs here, between BeginPaint and EndPaint.s
 
             FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));      //  fills the update region with a single color
 
@@ -299,7 +299,7 @@ LRESULT CALLBACK WindowProc(		// Message handler function
           case VK_RETURN:
           MessageBox(hwnd, L"You pressed something.", L"Yay!", MB_OK | MB_ICONERROR);
               break;  //or return 0; if you don't want to pass it further to def proc
-          //If not your key, skip to default:
+
          }
 	}
     case WM_ERASEBKGND:			// uMsg = 20
